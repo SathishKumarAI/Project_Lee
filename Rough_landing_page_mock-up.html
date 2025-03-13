@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<title>Welcome to Like a Rainbow</title>-->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+        h2 {
+            font-size: 2em;
+            color: #ff6347; /* Attention-getting color */
+            margin-bottom: 30px;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .fine-print {
+            font-size: 0.8em;
+            color: #666;
+        }
+        .other-field {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!--<h1>Welcome to Like a Rainbow</h1>-->
+    <h2>Let's get started and choose a category.</h2> <!-- or "" -->
+    <div class="button-container">
+        <a href="professional-development.html" class="button">Professional Development</a>
+        <a href="biographies.html" class="button">Biographies</a>
+        <a href="continued-education.html" class="button">Continued Education</a>
+        <a href="college-level-exam-prep.html" class="button">College Level Exam Prep</a>
+        <div class="fine-print">for those who plan to test out for credit</div>
+        <div class="other-field">
+            <label for="other">Other:</label>
+            <input type="text" id="other" name="other">
+            <button class="button" onclick="submitOther()">Submit</button>
+        </div>
+    </div>
+    <script>
+        function submitOther() {
+            const otherValue = document.getElementById('other').value;
+            // Logic to send the 'otherValue' to the back-end for processing
+            console.log('Submitted:', otherValue);
+            alert('Your submission has been received!');
+        }
+    </script>
+</body>
+</html>
